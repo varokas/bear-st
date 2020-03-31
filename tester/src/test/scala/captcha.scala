@@ -6,10 +6,10 @@ import scala.concurrent.duration._
 
 class CaptchaPageSimulation extends Simulation {
 
-  val httpProtocol = http.baseUrl("https://localhost:3000")
+  val httpProtocol = http.baseUrl("http://localhost:3000")
 
-  val numberOfUsers = 10
-  val duration = 10
+  val numberOfUsers = 100
+  val duration = 2
 
   val scn = scenario("Captcha")
     .exec(http("open_page")

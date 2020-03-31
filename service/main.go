@@ -10,7 +10,7 @@ import (
 	"go.uber.org/ratelimit"
 )
 
-var rl = ratelimit.New(100) // per second
+var rl = ratelimit.New(10) // per second
 
 func main() {
 	r := mux.NewRouter()
