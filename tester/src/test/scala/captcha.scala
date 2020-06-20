@@ -13,7 +13,7 @@ class CaptchaPageSimulation extends Simulation {
 
   val scn = scenario("Captcha")
     .exec(http("open_page")
-      .get("/captcha")
+      .get("/")
       .check(status.is(200)))
     .inject(constantUsersPerSec(numberOfUsers) during (duration seconds))
     .throttle(reachRps(numberOfUsers.toInt) in (5 seconds), holdFor(duration seconds))
